@@ -4,18 +4,20 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "FORCE_COLOR=1 NODE_ENV=development node src/server.js",
+    "dev": "FORCE_COLOR=1 NODE_ENV=development nodemon src/server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "chalk": "^4.1.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "joi": "^18.0.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.1",
     "nodemon": "^3.1.10"
